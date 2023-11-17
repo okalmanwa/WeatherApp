@@ -86,6 +86,7 @@ export default function WeatherApp() {
 
   return (
     <div className="container">
+       <div className="all-contents">
       <h2 style={{ color: 'white', textAlign: 'center', textTransform: 'uppercase', padding: '2%' }}>Weather App</h2>
       <div className="top-bar">
         <input
@@ -109,21 +110,32 @@ export default function WeatherApp() {
             <img src={wicon} alt="" />
           </div>
           <div className="weather-temp">
-            24&deg;C
+     
           </div>
           <div className="weather-location">
-            London
+  
           </div>
           <div className="dataContainer">
+
             <div className="element">
-              <img src={humidity_icon} className="icon" />
-              <div className="humidity-percent">64%</div>
-              <div className="text">Humidity</div>
+              <div>
+                <img src={wind_icon} className="icon" />
+                <div className="text">Wind</div>
+
+
+              </div>
+              <div className="wind-rate"></div>
+
+
             </div>
+
             <div className="element">
-              <img src={wind_icon} className="icon" />
-              <div className="wind-rate">18 km/hr</div>
-              <div className="text">Wind</div>
+              <div>
+                <img src={humidity_icon} className="icon" />
+                <div className="text">Humidity</div>
+              </div>
+              <div className="humidity-percent"></div>
+
             </div>
           </div>
 
@@ -136,5 +148,8 @@ export default function WeatherApp() {
       </div>
 
     </div>
+
+    </div>
+   
   )
 }
